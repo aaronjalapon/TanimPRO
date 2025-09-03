@@ -61,7 +61,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background">
       {currentScreen !== 'onboarding' && (
-        <div className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-sm p-4 z-10">
+        <div className="fixed top-0 left-0 right-0 bg-white/100 backdrop-blur-none border-b border-gray-200 shadow-sm p-4 z-10" style={{backgroundColor: 'white'}}>
           <div className="flex justify-between items-center">
             <img src={logoImg} alt="TanimPro Logo" className="h-8" />
             <div className="flex items-center gap-2">
