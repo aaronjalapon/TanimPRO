@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import logoImg from '../assets/TanimPro_Logo.png';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Switch } from './ui/switch';
+import { Input } from './ui/input';
 import { Label } from './ui/label';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
+import { Switch } from './ui/switch';
 
 export function OnboardingScreen({ onComplete }) {
   const [step, setStep] = useState(1);
@@ -49,7 +50,7 @@ export function OnboardingScreen({ onComplete }) {
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-green-100 p-4 flex items-center justify-center">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-3xl text-green-800 mb-2">🌾 TanimPro</h1>
+          <img src={logoImg} alt="TanimPro Logo" className="h-16 mx-auto mb-4" />
           <p className="text-green-700">Smart Farming Solutions for Filipino Farmers</p>
         </div>
 
@@ -143,6 +144,7 @@ export function OnboardingScreen({ onComplete }) {
                       <SelectItem value="english">English</SelectItem>
                       <SelectItem value="tagalog">Tagalog</SelectItem>
                       <SelectItem value="bisaya">Bisaya</SelectItem>
+                      <SelectItem value="ilonggo">Ilonggo</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
